@@ -93,7 +93,7 @@ const CartPage = ({ cartItems, updateQuantity, removeItem, clearCart, onBackHome
                 <div className="rounded-3xl bg-fuchsia-50 p-5 text-sm text-slate-600">
                   <p className="font-semibold text-slate-900">Informações</p>
                   <p className="mt-3 leading-7">
-                    Ajuste a quantidade, remova itens ou envie sua seleção para o WhatsApp usando o botão no canto inferior direito.
+                    Ajuste a quantidade, remova itens ou envie sua seleção para o WhatsApp usando o botão no canto inferior direito. Todos os pedidos vão para <strong>+55 48 99985-2544</strong>.
                   </p>
                 </div>
                 <button

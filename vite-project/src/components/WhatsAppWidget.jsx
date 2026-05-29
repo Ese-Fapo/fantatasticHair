@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 
-const WHATSAPP_NUMBER = '5511999999999'
+const WHATSAPP_NUMBER = '5548999852544'
 
 const WhatsAppWidget = ({ cartItems }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -76,7 +76,27 @@ const WhatsAppWidget = ({ cartItems }) => {
             Enviar pelo WhatsApp
           </button>
 
-          <p className="mt-3 text-xs text-slate-500">Número usado: +55 11 99999-9999</p>
+          <div className="mt-3 space-y-2 text-xs text-slate-500">
+            <p>Número usado para pedidos: <a href="https://wa.me/5548999852544" target="_blank" rel="noopener noreferrer" className="font-semibold text-fuchsia-600">+55 48 99985-2544</a></p>
+            <p>Outros contatos:</p>
+            <ul className="space-y-1 pl-4">
+              <li>
+                <a href="https://wa.me/5548999852544" target="_blank" rel="noopener noreferrer" className="text-fuchsia-600 underline">
+                  Florianópolis: +55 48 99985-2544
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/5548999567337" target="_blank" rel="noopener noreferrer" className="text-fuchsia-600 underline">
+                  Florianópolis: +55 48 99956-7337
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/5511985143116" target="_blank" rel="noopener noreferrer" className="text-fuchsia-600 underline">
+                  São Paulo: +55 11 98514-3116
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       )}
 

@@ -20,7 +20,17 @@ const Contact = () => {
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-[1.75rem] bg-white/5 p-6">
                 <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">WhatsApp</p>
-                <p className="mt-3 text-lg font-semibold text-white">+55 (11) 91234-5678</p>
+                <div className="mt-3 space-y-2 text-lg font-semibold text-white">
+                  <a href="https://wa.me/5548999852544" target="_blank" rel="noopener noreferrer" className="block underline">
+                    +55 (48) 99985-2544
+                  </a>
+                  <a href="https://wa.me/5548999567337" target="_blank" rel="noopener noreferrer" className="block underline">
+                    +55 (48) 99956-7337
+                  </a>
+                  <a href="https://wa.me/5511985143116" target="_blank" rel="noopener noreferrer" className="block underline">
+                    +55 (11) 98514-3116
+                  </a>
+                </div>
               </div>
               <div className="rounded-[1.75rem] bg-white/5 p-6">
                 <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">Email</p>
