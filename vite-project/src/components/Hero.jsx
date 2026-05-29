@@ -11,7 +11,7 @@ const Hero = () => {
     <section id="home" className="bg-amber-50 scroll-mt-20 py-14 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
-          <div className="space-y-8">
+          <div className="space-y-8 order-last lg:order-none">
             <span className="inline-flex items-center gap-2 rounded-full bg-fuchsia-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-fuchsia-700 shadow-sm">
               <span className="h-2.5 w-2.5 rounded-full bg-fuchsia-500 animate-pulse" /> Novidades premium
             </span>
@@ -52,7 +52,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-fuchsia-500 via-rose-400 to-orange-300 p-2 shadow-2xl shadow-pink-200/50">
+          <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-fuchsia-500 via-rose-400 to-orange-300 p-2 shadow-2xl shadow-pink-200/50 order-first lg:order-none">
             <div className="overflow-hidden rounded-4xl bg-slate-950">
               <img
                 src={imgSrc}

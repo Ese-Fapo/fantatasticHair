@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="rounded-3xl border border-slate-800/80 bg-slate-900/80 p-5">
                 <p className="text-sm uppercase tracking-[0.35em] text-pink-400">Endereço 1</p>
                 <p className="mt-3 text-slate-300 leading-7">
-                  Florianópolis 48<br />
+                  Florianópolis <br />
                   Av. Hercílio Luz, 636<br />
                   Centro, Florianópolis - SC<br />
                   <span className="font-semibold text-white">(48) 3224-6085</span>
