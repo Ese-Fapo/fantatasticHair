@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
                 <div className="mt-6 flex justify-end">
                   <a
-                    href="https://business.google.com"
+                    href="https://www.google.com/maps/place/Av.+Herc%C3%ADlio+Luz,+636+-+Centro,+Florian%C3%B3polis+-+SC,+88020-000/@-27.5977175,-48.5502709,17z/data=!3m1!4b1!4m6!3m5!1s0x9527383ac331029b:0x37a03aaa76d9e160!8m2!3d-27.5977175!4d-48.547696!16s%2Fg%2F11rgfz94fx?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
