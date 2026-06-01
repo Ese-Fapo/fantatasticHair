@@ -7,7 +7,7 @@ const MobileBottomBar = ({ cartCount, onNavigate }) => {
           onClick={() => onNavigate('cart')}
           className="flex-1 rounded-full border border-white/10 bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
         >
-          Carrinho {cartCount > 0 ? `(${cartCount})` : ''}
+           {cartCount > 0 ? `(${cartCount})` : ''}
         </button>
         <a
           href="#contact"
