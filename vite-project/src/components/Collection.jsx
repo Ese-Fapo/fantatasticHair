@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { FaHeart, FaRegHeart } from 'react-icons/fa'
 
 const collectionProducts = [
   {
@@ -164,7 +165,7 @@ const collectionProducts = [
   },
 ]
 
-const Collection = ({ cartItems, addItem }) => {
+const Collection = ({ cartItems, addItem, favoriteIds, toggleFavorite }) => {
   const [visibleCount, setVisibleCount] = useState(6)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -230,18 +231,27 @@ const Collection = ({ cartItems, addItem }) => {
                     -{product.discount}%
                   </div>
                 )}
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  loading="lazy"
-                  className="h-72 w-full object-cover brightness-95 transition duration-500 group-hover:scale-105"
-                />
-                <div className="p-6">
+                <button
+                  type="button"
+                  onClick={() => toggleFavorite(product.id)}
+                  className="absolute left-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-slate-600 shadow-lg shadow-slate-200 transition hover:bg-fuchsia-50 hover:text-fuchsia-600"
+                  aria-label={favoriteIds.includes(product.id) ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+                >
+                  {favoriteIds.includes(product.id) ? (
+                    <FaHeart className="text-lg text-fuchsia-500" />
+                  ) : (
+                    <FaRegHeart className="text-lg" />
+                  )}
+                </button>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    loading="lazy"
+                    className="h-56 sm:h-72 w-full object-cover brightness-95 transition duration-500 group-hover:scale-105"
+                  />
+                <div className="p-4 sm:p-6">
                   <div className="flex items-center justify-between gap-4 mb-3">
                     <h3 className="text-xl font-semibold text-slate-900">{product.name}</h3>
-                    <span className="rounded-full bg-fuchsia-100 px-3 py-1 text-sm font-semibold text-fuchsia-700">
-                      {product.price}
-                    </span>
                   </div>
                   <div className="mb-4 flex items-center justify-between gap-3 text-sm text-slate-500">
                     <div className="flex items-center gap-2">

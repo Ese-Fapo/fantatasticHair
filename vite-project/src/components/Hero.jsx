@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
           <div className="space-y-8">
             <span className="inline-flex items-center gap-2 rounded-full bg-fuchsia-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-fuchsia-700 shadow-sm">
-              <span className="h-2.5 w-2.5 rounded-full bg-fuchsia-500 animate-pulse" /> Novidades premium
+              <span className="h-2.5 w-2.5 rounded-full bg-fuchsia-500 animate-pulse" /> DESDE 1998
             </span>
             <div className="space-y-5">
               <p className="text-base font-semibold uppercase tracking-[0.23em] text-pink-600">Fantastic Hair</p>

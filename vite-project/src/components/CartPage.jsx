@@ -1,15 +1,15 @@
 import { useMemo } from 'react'
 
-const CartPage = ({ cartItems, updateQuantity, removeItem, clearCart, onBackHome }) => {
-  const total = useMemo(
-    () => cartItems.reduce((sum, item) => sum + item.priceValue * item.quantity, 0),
-    [cartItems]
-  )
+const buildWhatsAppMessage = (cartItems) => {
+  const header = 'Olá! Quero finalizar meu pedido com Fantastic Hair:'
+  const itemLines = cartItems.map((item) => `*${item.quantity}x* ${item.name}`)
+  return encodeURIComponent([header, ...itemLines].join('\n'))
+}
 
-  const formattedTotal = total.toLocaleString('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-  })
+const CartPage = ({ cartItems, updateQuantity, removeItem, clearCart, onBackHome }) => {
+  const totalItems = useMemo(() => cartItems.reduce((sum, item) => sum + item.quantity, 0), [cartItems])
+
+  // prices removed — showing item count instead
 
   return (
     <section className="min-h-[calc(100vh-92px)] bg-amber-50 py-16 sm:py-20">
@@ -84,18 +84,29 @@ const CartPage = ({ cartItems, updateQuantity, removeItem, clearCart, onBackHome
               ))}
             </div>
 
-            <aside className="rounded-[2rem] border border-pink-100 bg-white p-6 shadow-lg shadow-pink-100/30">
+            <aside className="rounded-[2rem] border border-pink-100 bg-white p-6 shadow-lg shadow-pink-100/30 lg:sticky lg:top-20">
               <div className="space-y-5">
                 <div>
                   <p className="text-sm uppercase tracking-[0.35em] text-pink-500">Resumo do pedido</p>
-                  <p className="mt-4 text-4xl font-extrabold text-slate-900">{formattedTotal}</p>
+                  <p className="mt-4 text-2xl sm:text-3xl font-extrabold text-slate-900">{totalItems} item{totalItems !== 1 ? 's' : ''}</p>
                 </div>
                 <div className="rounded-3xl bg-fuchsia-50 p-5 text-sm text-slate-600">
                   <p className="font-semibold text-slate-900">Informações</p>
                   <p className="mt-3 leading-7">
-                    Ajuste a quantidade, remova itens ou envie sua seleção para o WhatsApp usando o botão no canto inferior direito. Todos os pedidos vão para <strong>+55 48 99985-2544</strong>.
+                    Ajuste a quantidade, remova itens ou envie sua seleção para o WhatsApp usando o botão abaixo. Todos os pedidos vão para <strong>+55 48 99985-2544</strong>.
                   </p>
                 </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const whatsappNumber = '5548999852544'
+                    const text = buildWhatsAppMessage(cartItems)
+                    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank')
+                  }}
+                  className="w-full rounded-full bg-fuchsia-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-fuchsia-600"
+                >
+                  Enviar para WhatsApp e finalizar pedido
+                </button>
                 <button
                   type="button"
                   onClick={clearCart}

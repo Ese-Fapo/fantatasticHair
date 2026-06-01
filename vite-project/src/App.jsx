@@ -6,18 +6,30 @@ import Collection from './components/Collection.jsx'
 import Gallery from './components/Gallery.jsx'
 import About from './components/About.jsx'
 import Contact from './components/Contact.jsx'
+import Testimony from './components/Testimony.jsx'
 import Footer from './components/Footer.jsx'
-import WhatsAppWidget from './components/WhatsAppWidget.jsx'
+import WhatsAppWidget from './components/wataspp.jsx'
 import CartPage from './components/CartPage.jsx'
 
 const App = () => {
   const [view, setView] = useState('home')
   const [cartItems, setCartItems] = useState([])
+  const [favoriteIds, setFavoriteIds] = useState([])
 
   const cartCount = useMemo(
     () => cartItems.reduce((sum, item) => sum + item.quantity, 0),
     [cartItems]
   )
+
+  const favoriteCount = favoriteIds.length
+
+  const toggleFavorite = (productId) => {
+    setFavoriteIds((current) =>
+      current.includes(productId)
+        ? current.filter((id) => id !== productId)
+        : [...current, productId]
+    )
+  }
 
   const handleNavigate = (target) => {
     if (target === 'cart') {
@@ -64,14 +76,20 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-amber-50 text-slate-900">
-      <Header cartCount={cartCount} onNavigate={handleNavigate} view={view} />
+      <Header cartCount={cartCount} favoriteCount={favoriteCount} onNavigate={handleNavigate} view={view} />
       <main>
         {view === 'home' ? (
           <>
             <Hero />
             <Services />
-            <Collection cartItems={cartItems} addItem={addItem} />
+            <Collection
+              cartItems={cartItems}
+              addItem={addItem}
+              favoriteIds={favoriteIds}
+              toggleFavorite={toggleFavorite}
+            />
             <Gallery />
+            <Testimony />
             <About />
             <Contact />
           </>

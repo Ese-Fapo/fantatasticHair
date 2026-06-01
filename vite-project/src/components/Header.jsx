@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaHeart, FaSearch, FaShoppingBag } from 'react-icons/fa';
 
-const Header = ({ cartCount, onNavigate, view }) => {
+const Header = ({ cartCount, favoriteCount, onNavigate, view }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -69,14 +69,19 @@ const Header = ({ cartCount, onNavigate, view }) => {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <button className="text-slate-700 hover:text-fuchsia-600 transition-colors duration-300 relative group">
+            <button className="text-slate-700 hover:text-fuchsia-600 transition-colors duration-300 relative group" aria-label="Pesquisar">
               <FaSearch className="text-xl" />
               <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 rounded-full bg-slate-900 px-2 py-1 text-[11px] text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 Buscar
               </span>
             </button>
-            <button className="text-slate-700 hover:text-fuchsia-600 transition-colors duration-300 relative group">
+            <button className="relative text-slate-700 hover:text-fuchsia-600 transition-colors duration-300 group" aria-label="Favoritos">
               <FaHeart className="text-xl" />
+              {favoriteCount > 0 && (
+                <span className="absolute -top-2 -right-2 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-fuchsia-500 px-1.5 text-[11px] font-bold text-white">
+                  {favoriteCount}
+                </span>
+              )}
               <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 rounded-full bg-slate-900 px-2 py-1 text-[11px] text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 Favoritos
               </span>

@@ -1,3 +1,7 @@
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { SiTiktok } from 'react-icons/si'
+import { FcGoogle } from 'react-icons/fc'
+
 const Footer = () => {
   return (
     <footer className="bg-slate-950 py-14 text-slate-300">
@@ -56,17 +60,29 @@ const Footer = () => {
             <div>
               <p className="text-sm uppercase tracking-[0.35em] text-pink-400">Redes sociais</p>
               <div className="mt-4 flex flex-wrap gap-4 text-sm">
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
-                  <span className="text-lg">f</span>
-                  Facebook
+                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white">
+                    <FaFacebookF className="text-[16px]" style={{ color: '#1877F2' }} aria-hidden="true" />
+                  </span>
+                  <span>Facebook</span>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
-                  <span className="text-lg">i</span>
-                  Instagram
+                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white">
+                    <FaInstagram className="text-[16px]" style={{ color: '#E1306C' }} aria-hidden="true" />
+                  </span>
+                  <span>Instagram</span>
                 </a>
-                <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
-                  <span className="text-lg">♪</span>
-                  TikTok
+                <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white">
+                    <SiTiktok className="text-[16px]" style={{ color: '#010101' }} aria-hidden="true" />
+                  </span>
+                  <span>TikTok</span>
+                </a>
+                <a href="https://business.google.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white">
+                    <FcGoogle className="text-[18px]" aria-hidden="true" />
+                  </span>
+                  <span>Google</span>
                 </a>
               </div>
             </div>
