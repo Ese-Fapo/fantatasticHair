@@ -14,34 +14,73 @@ const Footer = () => {
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-slate-800/80 bg-slate-900/80 p-5">
+              <div className="rounded-3xl border border-slate-800/80 bg-slate-900/95 p-6 shadow-lg shadow-slate-950/10">
                 <p className="text-sm uppercase tracking-[0.35em] text-pink-400">Endereço 1</p>
-                <p className="mt-3 text-slate-300 leading-7">
-                  Florianópolis <br />
-                  Av. Hercílio Luz, 636<br />
-                  Centro, Florianópolis - SC<br />
-                  <span className="font-semibold text-white">(48) 3224-6085</span>
-                </p>
+                <div className="mt-3 space-y-2 text-slate-300 leading-7">
+                  <p>Florianópolis</p>
+                  <p>Av. Hercílio Luz, 636</p>
+                  <p>Centro, Florianópolis - SC</p>
+                  <p className="font-semibold text-white">(48) 3224-6085</p>
+                </div>
+                <div className="mt-6 flex justify-end">
+                  <a
+                    href="https://business.google.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
+                  >
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900">
+                      <FcGoogle className="text-xl" aria-hidden="true" />
+                    </span>
+                    <span>Ver no Google</span>
+                  </a>
+                </div>
               </div>
 
-              <div className="rounded-3xl border border-slate-800/80 bg-slate-900/80 p-5">
+              <div className="rounded-3xl border border-slate-800/80 bg-slate-900/95 p-6 shadow-lg shadow-slate-950/10">
                 <p className="text-sm uppercase tracking-[0.35em] text-pink-400">Endereço 2</p>
-                <p className="mt-3 text-slate-300 leading-7">
-                  São Paulo<br />
-                  Praça Carlos, 129<br />
-                  Centro Liberdade - SP<br />
-                  <span className="font-semibold text-white">(11) 3104-6568 / 3106-446</span>
-                </p>
+                <div className="mt-3 space-y-2 text-slate-300 leading-7">
+                  <p>São Paulo</p>
+                  <p>Praça Carlos, 129</p>
+                  <p>Centro Liberdade - SP</p>
+                  <p className="font-semibold text-white">(11) 3104-6568 / 3106-446</p>
+                </div>
+                <div className="mt-6 flex justify-end">
+                  <a
+                    href="https://business.google.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
+                  >
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900">
+                      <FcGoogle className="text-xl" aria-hidden="true" />
+                    </span>
+                    <span>Ver no Google</span>
+                  </a>
+                </div>
               </div>
 
-              <div className="rounded-3xl border border-slate-800/80 bg-slate-900/80 p-5 sm:col-span-2">
+              <div className="rounded-3xl border border-slate-800/80 bg-slate-900/95 p-6 shadow-lg shadow-slate-950/10 sm:col-span-2">
                 <p className="text-sm uppercase tracking-[0.35em] text-pink-400">Endereço 3</p>
-                <p className="mt-3 text-slate-300 leading-7">
-                  São Paulo<br />
-                  Rua Paula Souza, 215<br />
-                  Centro Ita - SP<br />
-                  <span className="font-semibold text-white">(11) 2429-5965 / 3413-0215</span>
-                </p>
+                <div className="mt-3 space-y-2 text-slate-300 leading-7">
+                  <p>São Paulo</p>
+                  <p>Rua Paula Souza, 215</p>
+                  <p>Centro Ita - SP</p>
+                  <p className="font-semibold text-white">(11) 2429-5965 / 3413-0215</p>
+                </div>
+                <div className="mt-6 flex justify-end">
+                  <a
+                    href="https://business.google.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
+                  >
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900">
+                      <FcGoogle className="text-xl" aria-hidden="true" />
+                    </span>
+                    <span>Ver no Google</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -78,12 +117,7 @@ const Footer = () => {
                   </span>
                   <span>TikTok</span>
                 </a>
-                <a href="https://business.google.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white">
-                    <FcGoogle className="text-[18px]" aria-hidden="true" />
-                  </span>
-                  <span>Google</span>
-                </a>
+               
               </div>
             </div>
           </div>

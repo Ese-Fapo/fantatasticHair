@@ -105,7 +105,7 @@ const Header = ({ cartCount, favoriteCount, onNavigate, view }) => {
             <button
               type="button"
               onClick={() => onNavigate('cart')}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-950 text-white transition hover:bg-slate-900"
+              className="relative inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-950 text-white transition hover:bg-slate-900"
               aria-label="Abrir carrinho"
             >
               <FaShoppingBag className="text-lg" />
