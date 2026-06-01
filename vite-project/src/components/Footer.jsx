@@ -89,8 +89,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-slate-800 pt-6 text-sm text-slate-500 text-center">
-          © 2026 Fantastic Hair. Todos os direitos reservados.
+        <div className="mt-10 border-t border-slate-800 pt-6 text-sm text-slate-500 text-center space-y-2">
+          <p>© 2026 Fantastic Hair. Todos os direitos reservados.</p>
+          <p>
+            Desenvolvido por <a href="https://sitesprofissionai.com/" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-200">Sites Profissionais</a>
+          </p>
         </div>
       </div>
     </footer>

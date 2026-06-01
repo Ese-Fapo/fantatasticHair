@@ -8,6 +8,7 @@ import About from './components/About.jsx'
 import Contact from './components/Contact.jsx'
 import Testimony from './components/Testimony.jsx'
 import Footer from './components/Footer.jsx'
+import MobileBottomBar from './components/MobileBottomBar.jsx'
 import WhatsAppWidget from './components/wataspp.jsx'
 import CartPage from './components/CartPage.jsx'
 
@@ -104,6 +105,7 @@ const App = () => {
         )}
       </main>
       <Footer />
+      <MobileBottomBar cartCount={cartCount} onNavigate={handleNavigate} />
       <WhatsAppWidget cartItems={cartItems} />
     </div>
   )

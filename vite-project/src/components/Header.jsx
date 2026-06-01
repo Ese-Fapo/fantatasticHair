@@ -101,13 +101,29 @@ const Header = ({ cartCount, favoriteCount, onNavigate, view }) => {
             </button>
           </div>
 
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-slate-700 hover:text-fuchsia-600 transition-colors duration-300"
-            aria-label="Abrir menu"
-          >
-            {isMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
-          </button>
+          <div className="flex items-center gap-3 md:hidden">
+            <button
+              type="button"
+              onClick={() => onNavigate('cart')}
+              className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-900"
+              aria-label="Abrir carrinho"
+            >
+              <FaShoppingBag className="text-base" />
+              <span>Carrinho</span>
+              {cartCount > 0 && (
+                <span className="rounded-full bg-fuchsia-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                  {cartCount}
+                </span>
+              )}
+            </button>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-slate-700 hover:text-fuchsia-600 transition-colors duration-300"
+              aria-label="Abrir menu"
+            >
+              {isMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
+            </button>
+          </div>
         </div>
 
         {isMenuOpen && (
