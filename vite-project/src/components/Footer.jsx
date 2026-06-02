@@ -2,9 +2,10 @@ import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { SiTiktok } from 'react-icons/si'
 import { FcGoogle } from 'react-icons/fc'
 
+
 const Footer = () => {
   return (
-    <footer className="bg-slate-950 py-14 text-slate-300">
+    <footer className="bg-slate-950 py-14 text-slate-300 pb-28 sm:pb-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 xl:grid-cols-[1.2fr_1fr] items-start">
           <div>
@@ -130,6 +131,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      
     </footer>
   )
 }
