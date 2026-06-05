@@ -8,11 +8,18 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'gallery': ['./src/components/Gallery.jsx'],
-          'about': ['./src/components/About.jsx'],
-          'contact': ['./src/components/Contact.jsx'],
-          'testimony': ['./src/components/Testimony.jsx'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('node_modules/react-dom')) return 'vendor-react-dom'
+            if (id.includes('node_modules/react' + '/')) return 'vendor-react'
+            if (id.includes('node_modules/react-icons')) return 'vendor-react-icons'
+            if (id.includes('node_modules/@digicroz/react-floating-whatsapp')) return 'vendor-whatsapp'
+            return 'vendor'
+          }
+          if (id.includes('/src/components/Gallery.jsx')) return 'gallery'
+          if (id.includes('/src/components/About.jsx')) return 'about'
+          if (id.includes('/src/components/Contact.jsx')) return 'contact'
+          if (id.includes('/src/components/Testimony.jsx')) return 'testimony'
         }
       }
     },
