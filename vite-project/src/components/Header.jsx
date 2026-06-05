@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaHeart, FaSearch, FaShoppingBag } from 'react-icons/fa';
 
-const Header = ({ cartCount, favoriteCount, onNavigate, view }) => {
+const Header = ({ cartCount, favoriteCount, onNavigate, }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

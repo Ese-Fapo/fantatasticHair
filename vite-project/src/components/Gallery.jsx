@@ -83,7 +83,12 @@ const Gallery = () => {
                     index === activeIndex ? 'border-[#9B4647]' : 'border-white/10 hover:border-white/30'
                   }`}
                 >
-                  <img src={src} alt={`Miniatura ${index + 1}`} className="h-full w-full object-cover" />
+                  <img 
+                    src={src} 
+                    alt={`Miniatura ${index + 1}`} 
+                    className="h-full w-full object-cover" 
+                    loading="lazy"
+                  />
                   {index === activeIndex && (
                     <span className="absolute right-2 top-2 rounded-full bg-[#9B4647] px-2 py-0.5 text-[11px] font-semibold text-white">
                       Ativa

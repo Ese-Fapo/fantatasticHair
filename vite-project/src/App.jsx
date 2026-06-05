@@ -1,16 +1,28 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, Suspense, lazy } from 'react'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Services from './components/Services.jsx'
 import Collection from './components/Collection.jsx'
-import Gallery from './components/Gallery.jsx'
-import About from './components/About.jsx'
-import Contact from './components/Contact.jsx'
-import Testimony from './components/Testimony.jsx'
 import Footer from './components/Footer.jsx'
 import MobileBottomBar from './components/MobileBottomBar.jsx'
 import WhatsAppWidget from './components/wataspp.jsx'
 import CartPage from './components/CartPage.jsx'
+
+// Lazy load components below the fold
+const Gallery = lazy(() => import('./components/Gallery.jsx'))
+const Testimony = lazy(() => import('./components/Testimony.jsx'))
+const About = lazy(() => import('./components/About.jsx'))
+const Contact = lazy(() => import('./components/Contact.jsx'))
+
+// Loading fallback component
+const SectionLoader = () => (
+  <div className="py-16 sm:py-20 flex items-center justify-center">
+    <div className="animate-pulse space-y-4 w-full max-w-2xl px-4">
+      <div className="h-12 bg-slate-200 rounded-lg"></div>
+      <div className="h-6 bg-slate-100 rounded-lg"></div>
+    </div>
+  </div>
+)
 
 const App = () => {
   const [view, setView] = useState('home')
@@ -89,10 +101,18 @@ const App = () => {
               favoriteIds={favoriteIds}
               toggleFavorite={toggleFavorite}
             />
-            <Gallery />
-            <Testimony />
-            <About />
-            <Contact />
+            <Suspense fallback={<SectionLoader />}>
+              <Gallery />
+            </Suspense>
+            <Suspense fallback={<SectionLoader />}>
+              <Testimony />
+            </Suspense>
+            <Suspense fallback={<SectionLoader />}>
+              <About />
+            </Suspense>
+            <Suspense fallback={<SectionLoader />}>
+              <Contact />
+            </Suspense>
           </>
         ) : (
           <CartPage
