@@ -8,7 +8,7 @@ const testimonials = [
     rating: 5,
     quote:
       'Comprei uma peruca para um evento e foi a melhor decisão — acabamento impecável e atendimento super atencioso. Voltarei sempre!',
-    avatarColor: 'bg-pink-400',
+    avatarColor: 'bg-[#9B4647]',
   },
   {
     id: 't2',
@@ -26,7 +26,7 @@ const testimonials = [
     rating: 4,
     quote:
       'Adorei o volume e o caimento. Recomendo para quem quer um resultado natural sem perder o estilo.',
-    avatarColor: 'bg-fuchsia-400',
+    avatarColor: 'bg-[#D4AF37]',
   },
 ]
 
@@ -40,7 +40,7 @@ const Stars = ({ rating = 5 }) => (
 
 export default function Testimony() {
   return (
-    <section id="testimony" className="py-16 sm:py-20 bg-gradient-to-b from-white to-pink-50">
+      <section id="testimony" className="py-16 sm:py-20 bg-gradient-to-b from-white to-[#D4AF37]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">O que nossos clientes dizem</h2>
@@ -51,7 +51,7 @@ export default function Testimony() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t) => (
-            <article key={t.id} className="rounded-3xl border border-pink-100 bg-white p-6 shadow-sm">
+            <article key={t.id} className="rounded-3xl border border-[#9B4647]/20 bg-white p-6 shadow-sm">
               <div className="flex items-start gap-4">
                 <div className={`inline-flex h-12 w-12 items-center justify-center rounded-full text-white ${t.avatarColor} shrink-0`}> 
                   <span className="font-bold">{t.name.split(' ').map(n => n[0]).slice(0,2).join('')}</span>

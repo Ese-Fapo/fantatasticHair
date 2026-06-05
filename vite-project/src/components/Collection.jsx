@@ -204,10 +204,10 @@ const Collection = ({ cartItems, addItem, favoriteIds, toggleFavorite }) => {
   }
 
   return (
-    <section id="collection" className="bg-linear-to-b from-pink-50 via-white to-amber-50 py-16 sm:py-20">
+    <section id="collection" className="bg-linear-to-b from-[#FFF6DF] via-white to-amber-50 py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center gap-4 mb-12">
-          <span className="inline-flex rounded-full bg-fuchsia-50 px-4 py-2 text-sm font-semibold uppercase tracking-[0.35em] text-fuchsia-700">
+          <span className="inline-flex rounded-full bg-[#D4AF37]/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.35em] text-[#9B4647]">
             Coleção em destaque
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
@@ -224,21 +224,21 @@ const Collection = ({ cartItems, addItem, favoriteIds, toggleFavorite }) => {
             return (
               <article
                 key={product.id}
-                className="relative group overflow-hidden rounded-4xl border border-pink-100 bg-white shadow-[0_30px_80px_rgba(236,72,153,0.12)] transition hover:-translate-y-1 hover:shadow-[0_30px_100px_rgba(236,72,153,0.18)]"
+                className="relative group overflow-hidden rounded-4xl border border-[#9B4647]/20 bg-white shadow-[0_30px_80px_rgba(155,70,71,0.12)] transition hover:-translate-y-1 hover:shadow-[0_30px_100px_rgba(155,70,71,0.18)]"
               >
                 {product.discount && (
-                  <div className="absolute right-4 top-4 z-10 rounded-full bg-fuchsia-500 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-fuchsia-500/30">
+                  <div className="absolute right-4 top-4 z-10 rounded-full bg-[#9B4647] px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-[rgba(155,70,71,0.3)]">
                     -{product.discount}%
                   </div>
                 )}
                 <button
                   type="button"
                   onClick={() => toggleFavorite(product.id)}
-                  className="absolute left-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-slate-600 shadow-lg shadow-slate-200 transition hover:bg-fuchsia-50 hover:text-fuchsia-600"
+                  className="absolute left-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-slate-600 shadow-lg shadow-slate-200 transition hover:bg-[#D4AF37]/10 hover:text-[#9B4647]"
                   aria-label={favoriteIds.includes(product.id) ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
                 >
                   {favoriteIds.includes(product.id) ? (
-                    <FaHeart className="text-lg text-fuchsia-500" />
+                    <FaHeart className="text-lg text-[#9B4647]" />
                   ) : (
                     <FaRegHeart className="text-lg" />
                   )}
@@ -266,7 +266,7 @@ const Collection = ({ cartItems, addItem, favoriteIds, toggleFavorite }) => {
                   <button
                     type="button"
                     onClick={() => addItem(product)}
-                    className="w-full rounded-full bg-fuchsia-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-fuchsia-600"
+                    className="w-full rounded-full bg-[#9B4647] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#7A3536]"
                   >
                     {quantity > 0 ? `Adicionar mais (${quantity})` : 'Adicionar ao pedido'}
                   </button>

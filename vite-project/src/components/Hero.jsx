@@ -12,11 +12,11 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
           <div className="space-y-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-fuchsia-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-fuchsia-700 shadow-sm">
-              <span className="h-2.5 w-2.5 rounded-full bg-fuchsia-500 animate-pulse" /> DESDE 1998
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#D4AF37]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#9B4647] shadow-sm">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#9B4647] animate-pulse" /> DESDE 1998
             </span>
             <div className="space-y-5">
-              <p className="text-base font-semibold uppercase tracking-[0.23em] text-pink-600">Fantastic Hair</p>
+              <p className="text-base font-semibold uppercase tracking-[0.23em] text-[#9B4647]">Fantastic Hair</p>
               <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
                 O melhor da beleza capilar com perucas e extensões de alto brilho.
               </h1>
@@ -28,31 +28,31 @@ const Hero = () => {
             <div className="grid gap-4 sm:grid-cols-2">
               <a
                 href="#collection"
-                className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-fuchsia-500 to-orange-500 px-6 py-3 text-base font-semibold text-white shadow-xl shadow-fuchsia-300/30 transition hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-[#9B4647] to-[#D4AF37] px-6 py-3 text-base font-semibold text-white shadow-xl shadow-[rgba(155,70,71,0.3)] transition hover:-translate-y-0.5"
               >
                 Ver coleção
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-full border border-pink-200 bg-white px-6 py-3 text-base font-semibold text-fuchsia-600 shadow-sm hover:bg-pink-50 transition"
+                className="inline-flex items-center justify-center rounded-full border border-[#9B4647]/20 bg-white px-6 py-3 text-base font-semibold text-[#9B4647] shadow-sm hover:bg-[#D4AF37]/10 transition"
               >
                 Fale conosco
               </a>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[1.75rem] border border-pink-100 bg-white p-6 shadow-sm">
-                <p className="text-sm uppercase tracking-[0.3em] text-pink-600">Entrega rápida</p>
+              <div className="rounded-[1.75rem] border border-[#9B4647]/20 bg-white p-6 shadow-sm">
+                <p className="text-sm uppercase tracking-[0.3em] text-[#9B4647]">Entrega rápida</p>
                 <p className="mt-3 text-slate-600">Seleção rápida e envio direto para o seu WhatsApp, sem complicação.</p>
               </div>
-              <div className="rounded-[1.75rem] border border-pink-100 bg-white p-6 shadow-sm">
-                <p className="text-sm uppercase tracking-[0.3em] text-pink-600">Suporte VIP</p>
+              <div className="rounded-[1.75rem] border border-[#9B4647]/20 bg-white p-6 shadow-sm">
+                <p className="text-sm uppercase tracking-[0.3em] text-[#9B4647]">Suporte VIP</p>
                 <p className="mt-3 text-slate-600">Atendimento pessoal para ajudar você a escolher a peruca ideal.</p>
               </div>
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-fuchsia-500 via-rose-400 to-orange-300 p-2 shadow-2xl shadow-pink-200/50">
+          <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-[#9B4647] via-[#5B3C3C] to-[#D4AF37] p-2 shadow-2xl shadow-[rgba(155,70,71,0.25)]">
             <div className="overflow-hidden rounded-4xl bg-slate-950">
               <img
                 src={imgSrc}

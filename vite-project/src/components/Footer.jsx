@@ -16,7 +16,7 @@ const Footer = () => {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-3xl border border-slate-800/80 bg-slate-900/95 p-6 shadow-lg shadow-slate-950/10">
-                <p className="text-sm uppercase tracking-[0.35em] text-pink-400">Endereço 1</p>
+                <p className="text-sm uppercase tracking-[0.35em]" style={{ color: '#9B4647' }}>Endereço 1</p>
                 <div className="mt-3 space-y-2 text-slate-300 leading-7">
                   <p>Florianópolis</p>
                   <p>Av. Hercílio Luz, 636</p>
@@ -39,7 +39,7 @@ const Footer = () => {
               </div>
 
               <div className="rounded-3xl border border-slate-800/80 bg-slate-900/95 p-6 shadow-lg shadow-slate-950/10">
-                <p className="text-sm uppercase tracking-[0.35em] text-pink-400">Endereço 2</p>
+                <p className="text-sm uppercase tracking-[0.35em]" style={{ color: '#9B4647' }}>Endereço 2</p>
                 <div className="mt-3 space-y-2 text-slate-300 leading-7">
                   <p>São Paulo</p>
                   <p>Praça Carlos, 129</p>
@@ -62,7 +62,7 @@ const Footer = () => {
               </div>
 
               <div className="rounded-3xl border border-slate-800/80 bg-slate-900/95 p-6 shadow-lg shadow-slate-950/10 sm:col-span-2">
-                <p className="text-sm uppercase tracking-[0.35em] text-pink-400">Endereço 3</p>
+                <p className="text-sm uppercase tracking-[0.35em]" style={{ color: '#9B4647' }}>Endereço 3</p>
                 <div className="mt-3 space-y-2 text-slate-300 leading-7">
                   <p>São Paulo</p>
                   <p>Rua Paula Souza, 215</p>
@@ -88,7 +88,7 @@ const Footer = () => {
 
           <div className="grid gap-6 sm:grid-cols-2">
             <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-pink-400">Links rápidos</p>
+              <p className="text-sm uppercase tracking-[0.35em]" style={{ color: '#9B4647' }}>Links rápidos</p>
               <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-400">
                 <a href="#home" className="transition hover:text-white">Início</a>
                 <a href="#services" className="transition hover:text-white">Serviços</a>
@@ -98,21 +98,21 @@ const Footer = () => {
             </div>
 
             <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-pink-400">Redes sociais</p>
+              <p className="text-sm uppercase tracking-[0.35em]" style={{ color: '#9B4647' }}>Redes sociais</p>
               <div className="mt-4 flex flex-wrap gap-4 text-sm">
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
+                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition" style={{ '--hover-bg': 'rgba(155, 70, 71, 0.1)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(155, 70, 71, 0.1)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)'}>
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white">
                     <FaFacebookF className="text-[16px]" style={{ color: '#1877F2' }} aria-hidden="true" />
                   </span>
                   <span>Facebook</span>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
+                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition" style={{ '--hover-bg': 'rgba(155, 70, 71, 0.1)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(155, 70, 71, 0.1)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)'}>
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white">
                     <FaInstagram className="text-[16px]" style={{ color: '#E1306C' }} aria-hidden="true" />
                   </span>
                   <span>Instagram</span>
                 </a>
-                <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition hover:bg-fuchsia-500/10">
+                <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition" style={{ '--hover-bg': 'rgba(155, 70, 71, 0.1)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(155, 70, 71, 0.1)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)'}>
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white">
                     <SiTiktok className="text-[16px]" style={{ color: '#010101' }} aria-hidden="true" />
                   </span>
@@ -127,7 +127,7 @@ const Footer = () => {
         <div className="mt-10 border-t border-slate-800 pt-6 text-sm text-slate-500 text-center space-y-2">
           <p>© 2026 Fantastic Hair. Todos os direitos reservados.</p>
           <p>
-            Desenvolvido por <a href="https://sitesprofissionai.com/" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-200">Sites Profissionais</a>
+            Desenvolvido por <a href="https://sitesprofissionai.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#9B4647' }} onMouseEnter={(e) => e.target.style.color = '#BDBFC0'} onMouseLeave={(e) => e.target.style.color = '#9B4647'}>Sites Profissionais</a>
           </p>
         </div>
       </div>

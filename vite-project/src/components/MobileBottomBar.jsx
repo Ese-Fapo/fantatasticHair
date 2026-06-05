@@ -11,7 +11,7 @@ const MobileBottomBar = ({ cartCount, onNavigate }) => {
         </button>
         <a
           href="#contact"
-          className="flex-1 rounded-full bg-gradient-to-r from-fuchsia-500 to-orange-500 px-4 py-3 text-sm font-semibold text-white text-center transition hover:opacity-95"
+          className="flex-1 rounded-full bg-gradient-to-r from-[#9B4647] to-[#D4AF37] px-4 py-3 text-sm font-semibold text-white text-center transition hover:opacity-95"
         >
           WhatsApp
         </a>

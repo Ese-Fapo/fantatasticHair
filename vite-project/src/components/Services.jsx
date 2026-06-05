@@ -21,7 +21,7 @@ const Services = () => {
     <section id="services" className="bg-white py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center gap-4 mb-12">
-          <span className="inline-flex rounded-full bg-pink-50 px-4 py-2 text-sm font-semibold tracking-[0.35em] text-pink-700 uppercase">
+          <span className="inline-flex rounded-full bg-[#D4AF37]/10 px-4 py-2 text-sm font-semibold tracking-[0.35em] text-[#9B4647] uppercase">
             Serviços profissionais
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
@@ -34,8 +34,8 @@ const Services = () => {
 
         <div className="grid gap-6 md:grid-cols-3">
           {services.map((service) => (
-            <article key={service.title} className="rounded-[1.75rem] border border-pink-100 bg-pink-50/80 p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-              <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-gradient-to-br from-fuchsia-500 to-orange-400 text-2xl text-white shadow-lg shadow-fuchsia-200/50">
+            <article key={service.title} className="rounded-[1.75rem] border border-[#9B4647]/20 bg-[#D4AF37]/10 p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+              <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-gradient-to-br from-[#9B4647] to-[#D4AF37] text-2xl text-white shadow-lg shadow-[rgba(155,70,71,0.2)]">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">{service.title}</h3>

@@ -16,7 +16,7 @@ const CartPage = ({ cartItems, updateQuantity, removeItem, clearCart, onBackHome
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between mb-10">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-fuchsia-700">Sua sacola</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-[#9B4647]">Sua sacola</p>
             <h1 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">Itens selecionados</h1>
           </div>
           <button
@@ -29,13 +29,13 @@ const CartPage = ({ cartItems, updateQuantity, removeItem, clearCart, onBackHome
         </div>
 
         {cartItems.length === 0 ? (
-          <div className="rounded-[2rem] border border-dashed border-fuchsia-200 bg-white/80 p-12 text-center shadow-lg shadow-pink-100/40">
+          <div className="rounded-[2rem] border border-dashed border-[#9B4647]/20 bg-white/80 p-12 text-center shadow-lg shadow-[0_20px_60px_rgba(155,70,71,0.16)]">
             <p className="text-xl font-semibold text-slate-900">Seu carrinho está vazio</p>
             <p className="mt-3 text-slate-600">Adicione alguns produtos para ver tudo aqui.</p>
             <button
               type="button"
               onClick={onBackHome}
-              className="mt-6 inline-flex rounded-full bg-fuchsia-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-fuchsia-600"
+              className="mt-6 inline-flex rounded-full bg-[#9B4647] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#7A3536]"
             >
               Ver coleção
             </button>
@@ -44,7 +44,7 @@ const CartPage = ({ cartItems, updateQuantity, removeItem, clearCart, onBackHome
           <div className="grid gap-8 xl:grid-cols-[1.2fr_0.8fr]">
             <div className="space-y-6">
               {cartItems.map((item) => (
-                <div key={item.id} className="rounded-[2rem] border border-pink-100 bg-white p-6 shadow-sm">
+                <div key={item.id} className="rounded-[2rem] border border-[#9B4647]/20 bg-white p-6 shadow-sm">
                   <div className="grid gap-5 sm:grid-cols-[140px_1fr]">
                     <img src={item.image} alt={item.name} className="h-36 w-full rounded-3xl object-cover" />
                     <div className="flex flex-col justify-between">
@@ -84,16 +84,16 @@ const CartPage = ({ cartItems, updateQuantity, removeItem, clearCart, onBackHome
               ))}
             </div>
 
-            <aside className="rounded-[2rem] border border-pink-100 bg-white p-6 shadow-lg shadow-pink-100/30 lg:sticky lg:top-20">
+            <aside className="rounded-[2rem] border border-[#9B4647]/20 bg-white p-6 shadow-lg shadow-[0_20px_60px_rgba(155,70,71,0.16)] lg:sticky lg:top-20">
               <div className="space-y-5">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.35em] text-pink-500">Resumo do pedido</p>
+                  <p className="text-sm uppercase tracking-[0.35em] text-[#9B4647]">Resumo do pedido</p>
                   <p className="mt-4 text-2xl sm:text-3xl font-extrabold text-slate-900">{totalItems} item{totalItems !== 1 ? 's' : ''}</p>
                 </div>
-                <div className="rounded-3xl bg-fuchsia-50 p-5 text-sm text-slate-600">
+                <div className="rounded-3xl bg-[#D4AF37]/10 p-5 text-sm text-slate-600">
                   <p className="font-semibold text-slate-900">Informações</p>
                   <p className="mt-3 leading-7">
-                    Ajuste a quantidade, remova itens ou envie sua seleção para o WhatsApp usando o botão abaixo. Todos os pedidos vão para <strong>+55 48 99985-2544</strong>.
+                    Ajuste a quantidade, remova itens ou envie sua seleção para o WhatsApp usando o botão abaixo. Todos os pedidos vão para <strong>5548 99258544</strong>.
                   </p>
                 </div>
                 <button
@@ -103,7 +103,7 @@ const CartPage = ({ cartItems, updateQuantity, removeItem, clearCart, onBackHome
                     const text = buildWhatsAppMessage(cartItems)
                     window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank')
                   }}
-                  className="w-full rounded-full bg-fuchsia-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-fuchsia-600"
+                  className="w-full rounded-full bg-[#9B4647] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#7A3536]"
                 >
                   Enviar para WhatsApp e finalizar pedido
                 </button>
