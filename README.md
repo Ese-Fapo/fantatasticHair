@@ -7,7 +7,8 @@ React + Vite website for Fantastic Hair, with Tailwind CSS, product sections, ca
 - `vite-project/` - main frontend app
 - `vite-project/src/` - React source code and components
 - `vite-project/public/` - static assets copied into production builds
-- `vite-project/dist/` - production build output after running `npm run build`
+- `dist/` - root production build output for Hostinger after running `npm run build`
+- `vite-project/dist/` - app-local build output after running `npm run build` inside `vite-project`
 
 ## Quick Start
 
@@ -38,7 +39,18 @@ npm run lint
    ```
 
 2. Open Hostinger File Manager and go to the domain's `public_html` folder.
-3. Upload the contents of `vite-project/dist` into `public_html`.
+3. Upload the contents of `dist` into `public_html`.
 4. Make sure `public_html` contains `index.html`, `.htaccess`, `assets/`, `robots.txt`, and `sitemap.xml`.
 
 Do not upload the source files, `node_modules`, or the `vite-project` folder to Hostinger for a static deployment.
+
+## Hostinger Git / Node Settings
+
+Use these settings if Hostinger builds from the repository:
+
+```text
+Install command: npm install
+Build command: npm run build
+Publish directory: dist
+Node version: 20.19+ or 22.12+
+```
