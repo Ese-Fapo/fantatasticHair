@@ -106,7 +106,7 @@ const Footer = () => {
                   </span>
                   <span>Facebook</span>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition" style={{ '--hover-bg': 'rgba(155, 70, 71, 0.1)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(155, 70, 71, 0.1)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)'}>
+                <a href="https://www.instagram.com/fantastichairr/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-white transition" style={{ '--hover-bg': 'rgba(155, 70, 71, 0.1)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(155, 70, 71, 0.1)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)'}>
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white">
                     <FaInstagram className="text-[16px]" style={{ color: '#E1306C' }} aria-hidden="true" />
                   </span>
