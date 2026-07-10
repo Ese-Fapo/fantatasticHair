@@ -54,3 +54,17 @@ Build command: npm run build
 Publish directory: dist
 Node version: 20.19+ or 22.12+
 ```
+
+## Vercel Deployment
+
+The repository includes `vercel.json`, so Vercel should use:
+
+```text
+Framework preset: Vite
+Install command: npm install
+Build command: npm run build
+Output directory: dist
+Node version: 24.x
+```
+
+If deployment still fails, open the failed Vercel deployment and copy the first red error block from the Build Logs.
