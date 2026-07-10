@@ -1,16 +1,50 @@
-# React + Vite
+# Fantastic Hair Vite App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Static React site built with Vite and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Local Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Production Build
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run build
+```
 
-## Expanding the ESLint configuration
+The deployable files are generated in:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+dist/
+```
+
+## Hostinger Deployment
+
+1. Build the site from this folder:
+
+   ```bash
+   npm run build
+   ```
+
+2. In Hostinger File Manager, open the domain's `public_html` directory.
+3. Delete the old site files from `public_html` if this is replacing a previous static site.
+4. Upload the contents of `dist`, not the `dist` folder itself.
+5. Confirm these files are at the top level of `public_html`:
+
+   ```text
+   index.html
+   .htaccess
+   assets/
+   robots.txt
+   sitemap.xml
+   ```
+
+The included `.htaccess` file keeps direct refreshes working, sends unknown paths back to `index.html`, and adds long cache headers for static assets.
+
+## Notes
+
+- `vite.config.js` is configured for hosting at the domain root with `base: '/'`.
+- If the site is deployed inside a subfolder instead of the domain root, update `base` in `vite.config.js` before building.

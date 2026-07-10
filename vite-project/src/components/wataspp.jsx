@@ -1,4 +1,3 @@
-import React from 'react';
 import { FloatingWhatsApp } from '@digicroz/react-floating-whatsapp';
 
 export default function WhatsAppChat() {
