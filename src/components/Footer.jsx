@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <p className="text-2xl font-bold text-white">Fantastic Hair</p>
             <p className="mt-3 max-w-xl text-slate-400 leading-7">
-              Aqui você encontra perucas premium, coleções de beleza e atendimento express via WhatsApp. Continue a navegação ou fale conosco agora mesmo.
+              Aqui você encontra perucas premium, coleções de beleza e atendimento express via WhatsApp. Continue a navegação ou fale conosco agora mesmo..
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
