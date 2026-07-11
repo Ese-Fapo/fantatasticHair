@@ -35,10 +35,11 @@ npm run lint
    ```
 
 2. Open Hostinger File Manager and go to the domain's `public_html` folder.
-3. Upload the contents of `dist` into `public_html`.
+3. Upload the contents of `dist` into `public_html`. Do not upload the root development `index.html`.
 4. Make sure `public_html` contains `index.html`, `.htaccess`, `assets/`, `robots.txt`, and `sitemap.xml`.
 
 Do not upload the source files or `node_modules` to Hostinger for a static deployment.
+If the browser requests `/src/main.jsx`, Hostinger is serving the wrong `index.html`; replace the files in `public_html` with the contents of `dist`.
 
 ## Hostinger Git / Node Settings
 
