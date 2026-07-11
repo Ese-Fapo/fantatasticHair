@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
 
+const assetPath = (fileName) => `${import.meta.env.BASE_URL}${fileName}`
+
 const collectionProducts = [
   {
     id: 'hair-001',
@@ -9,7 +11,7 @@ const collectionProducts = [
     rating: 4.8,
     discount: 12,
     description: 'Cabelo natural com corte reto e brilho realista para o uso diário.',
-    image: '/hair.jpeg',
+    image: assetPath('hair.jpeg'),
   },
   {
     id: 'hair-002',
@@ -17,7 +19,7 @@ const collectionProducts = [
     price: 'R$ 429',
     rating: 4.5,
     description: 'Corte médio com ondas leves e volume natural, perfeito para um look moderno.',
-    image: '/hair2.jpeg',
+    image: assetPath('hair2.jpeg'),
   },
   {
     id: 'hair-003',
@@ -26,7 +28,7 @@ const collectionProducts = [
     rating: 4.9,
     discount: 15,
     description: 'Comprimento longo com brilho intenso, ideal para eventos especiais.',
-    image: '/hair3.jpeg',
+    image: assetPath('hair3.jpeg'),
   },
   {
     id: 'hair-004',
@@ -34,7 +36,7 @@ const collectionProducts = [
     price: 'R$ 479',
     rating: 4.3,
     description: 'Ondas suaves e acabamento aveludado para um visual sofisticado.',
-    image: '/hair4.jpeg',
+    image: assetPath('hair4.jpeg'),
   },
   {
     id: 'hair-005',
@@ -43,7 +45,7 @@ const collectionProducts = [
     rating: 4.7,
     discount: 10,
     description: 'Textura cheia e acabamento premium com brilho acetinado.',
-    image: '/Hair5.jpeg',
+    image: assetPath('Hair5.jpeg'),
   },
   {
     id: 'hair-006',
@@ -51,7 +53,7 @@ const collectionProducts = [
     price: 'R$ 559',
     rating: 4.2,
     description: 'Tonalidade rica com movimento natural e sensação de cabelo vivo.',
-    image: '/Hair6.jpeg',
+    image: assetPath('Hair6.jpeg'),
   },
   {
     id: 'hair-007',
@@ -60,7 +62,7 @@ const collectionProducts = [
     rating: 4.9,
     discount: 14,
     description: 'Estilo volumoso com nuances suaves e acabamento premium.',
-    image: '/Hair7.jpeg',
+    image: assetPath('Hair7.jpeg'),
   },
   {
     id: 'hair-008',
@@ -68,7 +70,7 @@ const collectionProducts = [
     price: 'R$ 519',
     rating: 4.6,
     description: 'Fios lisos com brilho elegante e corte simétrico sofisticado.',
-    image: '/Hair8.jpeg',
+    image: assetPath('Hair8.jpeg'),
   },
   {
     id: 'hair-009',
@@ -77,7 +79,7 @@ const collectionProducts = [
     rating: 4.4,
     discount: 11,
     description: 'Fios sedosos e acabamento natural para um visual suave.',
-    image: '/hair9.jpeg',
+    image: assetPath('hair9.jpeg'),
   },
   {
     id: 'hair-010',
@@ -85,7 +87,7 @@ const collectionProducts = [
     price: 'R$ 669',
     rating: 4.8,
     description: 'Acabamento de alto brilho com corpo completo.',
-    image: '/hair99.jpeg',
+    image: assetPath('hair99.jpeg'),
   },
   {
     id: 'wig-011',
@@ -94,7 +96,7 @@ const collectionProducts = [
     rating: 4.5,
     discount: 13,
     description: 'Acabamento natural, comprimento longo e brilho intenso para looks elegantes.',
-    image: '/Wig1.jpeg',
+    image: assetPath('Wig1.jpeg'),
   },
   {
     id: 'wig-012',
@@ -102,7 +104,7 @@ const collectionProducts = [
     price: 'R$ 349',
     rating: 4.1,
     description: 'Corte bob com volume leve, ideal para um visual sofisticado e confortável.',
-    image: '/Wig2.jpeg',
+    image: assetPath('Wig2.jpeg'),
   },
   {
     id: 'wig-013',
@@ -111,7 +113,7 @@ const collectionProducts = [
     rating: 4.7,
     discount: 12,
     description: 'Ondas naturais com movimento completo para um charme impactante no dia a dia.',
-    image: '/Wig3.jpeg',
+    image: assetPath('Wig3.jpeg'),
   },
   {
     id: 'wig-014',
@@ -119,7 +121,7 @@ const collectionProducts = [
     price: 'R$ 459',
     rating: 4.3,
     description: 'Textura suave e brilho premium, perfeita para eventos especiais ou rotina elegante.',
-    image: '/Wig4.jpeg',
+    image: assetPath('Wig4.jpeg'),
   },
   {
     id: 'wig-015',
@@ -127,7 +129,7 @@ const collectionProducts = [
     price: 'R$ 579',
     rating: 4.8,
     description: 'Comprimento extra e toque sedoso para um acabamento com presença total.',
-    image: '/Wig5.jpeg',
+    image: assetPath('Wig5.jpeg'),
   },
   {
     id: 'wig-016',
@@ -136,7 +138,7 @@ const collectionProducts = [
     rating: 4.6,
     discount: 10,
     description: 'Fios escuros e super lisos com caimento natural e acabamento de luxo.',
-    image: '/Wig6.jpeg',
+    image: assetPath('Wig6.jpeg'),
   },
   {
     id: 'wig-017',
@@ -144,7 +146,7 @@ const collectionProducts = [
     price: 'R$ 529',
     rating: 4.2,
     description: 'Volume generoso e acabamento com movimento para looks poderosos.',
-    image: '/Wig7.jpeg',
+    image: assetPath('Wig7.jpeg'),
   },
   {
     id: 'wig-018',
@@ -153,7 +155,7 @@ const collectionProducts = [
     rating: 4.9,
     discount: 15,
     description: 'Ondas glamourosas com textura premium e caimento perfeito.',
-    image: '/Wig8.jpeg',
+    image: assetPath('Wig8.jpeg'),
   },
   {
     id: 'wig-019',
@@ -161,7 +163,7 @@ const collectionProducts = [
     price: 'R$ 609',
     rating: 4.4,
     description: 'Brilho profundo e acabamento suave para um look elegante todo dia.',
-    image: '/Wig10.jpeg',
+    image: assetPath('Wig10.jpeg'),
   },
 ]
 

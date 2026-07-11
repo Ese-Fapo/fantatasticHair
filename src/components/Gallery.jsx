@@ -1,25 +1,27 @@
 import { useState } from 'react'
 
+const assetPath = (fileName) => `${import.meta.env.BASE_URL}${fileName}`
+
 const galleryPhotos = [
-  '/hair.jpeg',
-  '/hair2.jpeg',
-  '/hair3.jpeg',
-  '/hair4.jpeg',
-  '/Hair5.jpeg',
-  '/Hair6.jpeg',
-  '/Hair7.jpeg',
-  '/Hair8.jpeg',
-  '/hair9.jpeg',
-  '/hair99.jpeg',
-  '/Wig1.jpeg',
-  '/Wig2.jpeg',
-  '/Wig3.jpeg',
-  '/Wig4.jpeg',
-  '/Wig5.jpeg',
-  '/Wig6.jpeg',
-  '/Wig7.jpeg',
-  '/Wig8.jpeg',
-  '/Wig10.jpeg',
+  assetPath('hair.jpeg'),
+  assetPath('hair2.jpeg'),
+  assetPath('hair3.jpeg'),
+  assetPath('hair4.jpeg'),
+  assetPath('Hair5.jpeg'),
+  assetPath('Hair6.jpeg'),
+  assetPath('Hair7.jpeg'),
+  assetPath('Hair8.jpeg'),
+  assetPath('hair9.jpeg'),
+  assetPath('hair99.jpeg'),
+  assetPath('Wig1.jpeg'),
+  assetPath('Wig2.jpeg'),
+  assetPath('Wig3.jpeg'),
+  assetPath('Wig4.jpeg'),
+  assetPath('Wig5.jpeg'),
+  assetPath('Wig6.jpeg'),
+  assetPath('Wig7.jpeg'),
+  assetPath('Wig8.jpeg'),
+  assetPath('Wig10.jpeg'),
 ]
 
 const Gallery = () => {
