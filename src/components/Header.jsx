@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaHeart, FaSearch, FaShoppingBag } from 'react-icons/fa';
 
+const assetPath = (fileName) => `${import.meta.env.BASE_URL}${fileName}`;
+
 const Header = ({ cartCount, favoriteCount, onNavigate, }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,12 +41,12 @@ const Header = ({ cartCount, favoriteCount, onNavigate, }) => {
             onClick={() => onNavigate('#home')}
             className="flex items-center gap-3 transition-transform duration-300 hover:-translate-y-0.5"
           >
-            <span className="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-gradient-to-br from-[#9B4647] via-[#5B3C3C] to-[#D4AF37] shadow-xl shadow-[rgba(155,70,71,0.2)] text-white ring-1 ring-white/20">
-              <svg viewBox="0 0 64 64" className="h-8 w-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 35C25 23 38 20 46 24" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-                <path d="M22 44C30 32 42 28 51 33" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-                <path d="M36 14L40 24L50 26L42 32L44 42L36 36L28 42L30 32L22 26L32 24L36 14Z" fill="currentColor" opacity="0.85" />
-              </svg>
+            <span className="inline-flex h-14 w-14 items-center justify-center rounded-3xl overflow-hidden">
+              <img
+                src={assetPath('logo.nav.jpeg')}
+                alt="Fantastic Hair logo"
+                className="h-10 w-10 object-contain"
+              />
             </span>
             <div className="text-left">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#9B4647]">Fantastic Hair</p>

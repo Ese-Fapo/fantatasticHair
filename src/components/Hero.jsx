@@ -4,7 +4,7 @@ import { useState } from 'react'
 const assetPath = (fileName) => `${import.meta.env.BASE_URL}${fileName}`
 
 const Hero = () => {
-  const [imgSrc, setImgSrc] = useState(() => assetPath('Wig6.jpeg'))
+  const [imgSrc, setImgSrc] = useState(() => assetPath('hero.pic.jpeg'))
 
   const placeholder =
     "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect fill='%23fff7ed' width='600' height='400'/><text x='300' y='200' text-anchor='middle' dominant-baseline='middle' fill='%23b91c1c' font-size='22' font-family='Arial'>Imagem%20não%20encontrada</text></svg>"
