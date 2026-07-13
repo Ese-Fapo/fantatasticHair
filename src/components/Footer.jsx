@@ -38,51 +38,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-slate-800/80 bg-slate-900/95 p-6 shadow-lg shadow-slate-950/10">
-                <p className="text-sm uppercase tracking-[0.35em]" style={{ color: '#9B4647' }}>Endereço 2</p>
-                <div className="mt-3 space-y-2 text-slate-300 leading-7">
-                  <p>São Paulo</p>
-                  <p>Praça Carlos, 129</p>
-                  <p>Centro Liberdade - SP</p>
-                  <p className="font-semibold text-white">(11) 3104-6568 / 3106-446</p>
-                </div>
-                <div className="mt-6 flex justify-end">
-                  <a
-                    href="https://business.google.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
-                  >
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900">
-                      <FcGoogle className="text-xl" aria-hidden="true" />
-                    </span>
-                    <span>Ver no Google</span>
-                  </a>
-                </div>
-              </div>
 
-              <div className="rounded-3xl border border-slate-800/80 bg-slate-900/95 p-6 shadow-lg shadow-slate-950/10 sm:col-span-2">
-                <p className="text-sm uppercase tracking-[0.35em]" style={{ color: '#9B4647' }}>Endereço 3</p>
-                <div className="mt-3 space-y-2 text-slate-300 leading-7">
-                  <p>São Paulo</p>
-                  <p>Rua Paula Souza, 215</p>
-                  <p>Centro Ita - SP</p>
-                  <p className="font-semibold text-white">(11) 2429-5965 / 3413-0215</p>
-                </div>
-                <div className="mt-6 flex justify-end">
-                  <a
-                    href="https://business.google.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
-                  >
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-900">
-                      <FcGoogle className="text-xl" aria-hidden="true" />
-                    </span>
-                    <span>Ver no Google</span>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
 

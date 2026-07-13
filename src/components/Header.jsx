@@ -51,7 +51,8 @@ const Header = ({ cartCount, favoriteCount, onNavigate, }) => {
             <div className="text-left">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#9B4647]">Fantastic Hair</p>
               <h1 className="text-lg font-bold text-slate-900 sm:text-xl md:text-2xl bg-gradient-to-r from-[#9B4647] via-[#5B3C3C] to-[#D4AF37] bg-clip-text text-transparent">
-                cabelo com brilho
+                
+              Cabelo que <br /> realça sua beleza
               </h1>
             </div>
           </button>

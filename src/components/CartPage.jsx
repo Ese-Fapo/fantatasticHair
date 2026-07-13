@@ -93,13 +93,13 @@ const CartPage = ({ cartItems, updateQuantity, removeItem, clearCart, onBackHome
                 <div className="rounded-3xl bg-[#D4AF37]/10 p-5 text-sm text-slate-600">
                   <p className="font-semibold text-slate-900">Informações</p>
                   <p className="mt-3 leading-7">
-                    Ajuste a quantidade, remova itens ou envie sua seleção para o WhatsApp usando o botão abaixo. Todos os pedidos vão para <strong>5548 99258544</strong>.
+                    Ajuste a quantidade, remova itens ou envie sua seleção para o WhatsApp usando o botão abaixo. Todos os pedidos vão para <strong>+55 4899258544</strong>.
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={() => {
-                    const whatsappNumber = '5548999852544'
+                    const whatsappNumber = '554899258544'
                     const text = buildWhatsAppMessage(cartItems)
                     window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank')
                   }}

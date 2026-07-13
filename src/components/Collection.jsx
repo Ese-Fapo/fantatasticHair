@@ -213,7 +213,7 @@ const Collection = ({ cartItems, addItem, favoriteIds, toggleFavorite }) => {
             Coleção em destaque
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-            Nossos best-sellers para seu look
+            Fantastic Hair – Qualidade, Beleza e os Melhores Cabelos.
           </h2>
           <p className="max-w-2xl text-slate-600">
             Escolha peças com qualidade premium, design exclusivo e pronto para entrar em cena. Adicione ao pedido e envie direto no WhatsApp.

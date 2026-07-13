@@ -34,7 +34,9 @@ const Contact = () => {
               </div>
               <div className="rounded-[1.75rem] bg-white/5 p-6">
                 <p className="text-sm uppercase tracking-[0.25em] text-[#D4AF37]">Email</p>
-                <p className="mt-3 text-lg font-semibold text-white">contato@fantastichair.com.br</p>
+                <a href="mailto:fantastichair@hotmail.com" className="mt-3 block text-lg font-semibold text-white underline">
+                  fantastichair@hotmail.com
+                </a>
               </div>
             </div>
           </div>
