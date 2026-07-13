@@ -46,6 +46,7 @@ const Hero = () => {
                 Fale conosco
               </a>
             </div>
+            <div>
             <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-[#9B4647] via-[#5B3C3C] to-[#D4AF37] p-2 shadow-2xl shadow-[rgba(155,70,71,0.25)] order-2">
               <div className="overflow-hidden rounded-4xl bg-slate-950">
                 <img
@@ -56,7 +57,7 @@ const Hero = () => {
                   onError={() => setImgSrc(placeholder)}
                 />
               </div>
- 
+ </div> <br />
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-[1.75rem] border border-[#9B4647]/20 bg-white p-6 shadow-sm">
                   <p className="text-sm uppercase tracking-[0.3em] text-[#9B4647]">
