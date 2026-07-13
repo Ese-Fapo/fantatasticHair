@@ -6,6 +6,7 @@ import Collection from './components/Collection.jsx'
 import Footer from './components/Footer.jsx'
 import MobileBottomBar from './components/MobileBottomBar.jsx'
 import WhatsAppWidget from './components/wataspp.jsx'
+import InstagramFloat from './components/InstagramFloat.jsx'
 import CartPage from './components/CartPage.jsx'
 
 // Lazy load components below the fold
@@ -127,6 +128,7 @@ const App = () => {
       <Footer />
       <MobileBottomBar cartCount={cartCount} onNavigate={handleNavigate} />
       <WhatsAppWidget cartItems={cartItems} />
+      <InstagramFloat />
     </div>
   )
 }
