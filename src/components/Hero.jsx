@@ -13,7 +13,7 @@ const Hero = () => {
     <section id="home" className="bg-amber-50 scroll-mt-20 py-14 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
-          <div className="space-y-8">
+          <div className="space-y-8 order-1">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#D4AF37]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#9B4647] shadow-sm">
               <span className="h-2.5 w-2.5 rounded-full bg-[#9B4647] animate-pulse" /> DESDE 1998
             </span>
@@ -54,7 +54,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-[#9B4647] via-[#5B3C3C] to-[#D4AF37] p-2 shadow-2xl shadow-[rgba(155,70,71,0.25)]">
+          <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-[#9B4647] via-[#5B3C3C] to-[#D4AF37] p-2 shadow-2xl shadow-[rgba(155,70,71,0.25)] order-2">
             <div className="overflow-hidden rounded-4xl bg-slate-950">
               <img
                 src={imgSrc}
@@ -64,9 +64,7 @@ const Hero = () => {
                 onError={() => setImgSrc(placeholder)}
               />
             </div>
-            <div className="absolute left-6 bottom-6 rounded-full border border-black/20 bg-white/10 px-4 py-2 text-sm font-semibold text-black backdrop-blur-sm">
-              Desde 1998, a referência em perucas premium .
-            </div>
+            
           </div>
         </div>
       </div>
