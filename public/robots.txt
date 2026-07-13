@@ -3,7 +3,7 @@ Allow: /
 Disallow: /admin
 Disallow: /private
 
-Sitemap: https://fantastichair.com/sitemap.xml
+Sitemap: https://fantastichair.com.br/sitemap.xml
 
 # Google
 User-agent: Googlebot
