@@ -59,7 +59,7 @@ const About = () => {
                 </div>
                 <div>
                   <div className="text-sm font-semibold">Loja física — Florianópolis</div>
-                  <p className="text-sm text-white/90">Presença forte na cidade com loja e atendimento local. Av. Hercílio Luz, 636 — Centro.</p>
+                  <p className="text-sm text-white/90">Presença forte na cidade com loja e atendimento local. Rua Felipe Schmitt, 303, Sala 416, Florianópolis - SC, CEP 88010-000.</p>
                 </div>
               </div>
             </div>
