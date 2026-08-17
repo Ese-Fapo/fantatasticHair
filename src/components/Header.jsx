@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaHeart, FaSearch, FaShoppingBag } from 'react-icons/fa';
 
-const assetPath = (fileName) => `${import.meta.env.BASE_URL}${fileName}`;
+const assetPath = (fileName) => `/${fileName}`;
 
 const Header = ({ cartCount, favoriteCount, onNavigate, }) => {
   const [isScrolled, setIsScrolled] = useState(false);

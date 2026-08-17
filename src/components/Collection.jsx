@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
 
-const assetPath = (fileName) => `${import.meta.env.BASE_URL}${fileName}`
+const assetPath = (fileName) => `/${fileName}`
 
 const collectionProducts = [
   {

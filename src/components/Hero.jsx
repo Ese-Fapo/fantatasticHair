@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const assetPath = (fileName) => `${import.meta.env.BASE_URL}${fileName}`;
+const assetPath = (fileName) => `/${fileName}`;
 
 const Hero = () => {
   const [imgSrc, setImgSrc] = useState(() => assetPath("hero.pic.jpeg"));
