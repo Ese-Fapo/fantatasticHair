@@ -10,6 +10,7 @@ This guide walks you through deploying your Vite + React site to Hostinger.
 ## Build Instructions
 
 The site has already been built and the production files are in the `dist/` folder.
+There is also a ready-to-upload archive named `hostinger-deployment-ready.zip` containing the contents of `dist/`.
 
 To rebuild at any time, run:
 ```bash
@@ -28,7 +29,7 @@ npm run build
 
 2. **Upload Files**
    - Delete any existing files in `public_html`
-   - Upload all files from the `dist/` folder to `public_html`
+   - Upload all files from the `dist/` folder to `public_html`, or upload and extract `hostinger-deployment-ready.zip` there
    - Make sure to include the `.htaccess` file (it may be hidden)
 
 3. **Verify**

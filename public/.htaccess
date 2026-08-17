@@ -1,7 +1,9 @@
 Options -MultiViews
 
-AddType application/javascript .js .mjs .jsx
+AddType application/javascript .js .mjs
 AddType text/css .css
+AddType image/svg+xml .svg
+AddType video/mp4 .mp4
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -14,6 +16,10 @@ AddType text/css .css
   RewriteRule ^ - [L]
 
   RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
 <IfModule mod_headers.c>
